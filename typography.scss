@@ -1,0 +1,45 @@
+// MDC Typography
+
+@mixin mdc-typography-size($font-size, $line-height: false) {
+  font-size: $font-size;
+  $line-height: $line-height or $font-size * 1.2;
+
+  @include mdc-typography-baseline-top($line-height);
+  @include mdc-typography-baseline-bottom($line-height);
+  line-height: $line-height;
+}
+
+.mdc-typography--headline1-char-responsive--x-short {
+  @include mdc-typography-size(54px);
+}
+
+.mdc-typography--headline1-char-responsive--short {
+  @include mdc-typography-size(48px);
+}
+
+.mdc-typography--headline1-char-responsive--medium {
+  @include mdc-typography-size(42px);
+}
+
+.mdc-typography--headline1-char-responsive--long {
+  @include mdc-typography-size(38px);
+}
+
+
+@media (max-width: 768px) {
+  .mdc-typography--headline1-char-responsive--x-short {
+    @include mdc-typography-size(48px);
+  }
+
+  .mdc-typography--headline1-char-responsive--short {
+    @include mdc-typography-size(42px);
+  }
+
+  .mdc-typography--headline1-char-responsive--medium {
+    @include mdc-typography-size(38px);
+  }
+
+  .mdc-typography--headline1-char-responsive--long {
+    @include mdc-typography-size(32px);
+  }
+}
